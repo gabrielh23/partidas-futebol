@@ -1,0 +1,31 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-inputs{
+  padding-bottom: 10px;
+  border-bottom: 1px solid lightgray;
+}
+
+.li-lista {
+  list-style-type: none;
+}
+
+.form-input {
+  padding: 5px 10px;
+  border: 1px solid lightgray;
+}
+
+.form-button {
+  padding: 4px;
+  cursor: pointer;
+}
+
+.placar-jogo {
+  padding: 10px;
+  background: #64b5f6;
+  border-radius: 5px;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Partidas de Futebol</title>
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+  <h1>Partidas de Futebol</h1>
+  <form class="form-inputs" action="/store" method="POST">
+    <input type="text" class="form-input" name="timeA" placeholder="Time da Casa">
+    <input type="number" class="form-input" name="golsA"
+placeholder="Gols Casa">
+    <p style="display: inline-block;"> x </p>
+    <input type="number" class="form-input" name="golsB" placeholder="Gols Visitante">
+    <input type="text" class="form-input" name="timeB" placeholder="Time Visitante">
+    <button class="form-button" type="submit">Adicionar</button>
+  </form>
+  <ul>
+      {% for item in partidas %}
+        <li class="li-lista">
+          <form action="/update/{{loop.index0}}" method="post">
+            <p class="placar-jogo">{{item.timeA}} {{item.golsA}} x {{item.golsB}} {{item.timeB}}</p>
+          </form>
+        </li>
+      {% endfor%}
+    </ul>
+</body>
+</html>
